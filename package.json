@@ -1,0 +1,30 @@
+{
+    "name": "countselection",
+    "widgetName": "CountSelection",
+    "version": "1.2.0",
+    "description": "Searchable dropdown for selecting a numeric value from a min/max range (integer or decimal)",
+    "copyright": "2026",
+    "license": "Apache-2.0",
+    "packagePath": "siemens",
+    "config": {},
+    "mxpackage": {
+        "name": "CountSelection",
+        "type": "widget",
+        "mpkName": "siemens.CountSelection.mpk"
+    },
+    "scripts": {
+        "start": "pluggable-widgets-tools start:web",
+        "dev": "pluggable-widgets-tools start:web",
+        "build": "pluggable-widgets-tools build:web",
+        "lint": "pluggable-widgets-tools lint",
+        "lint:fix": "pluggable-widgets-tools lint:fix",
+        "release": "pluggable-widgets-tools release:web"
+    },
+    "devDependencies": {
+        "@mendix/pluggable-widgets-tools": "^10.21.2",
+        "@types/big.js": "^6.2.2"
+    },
+    "dependencies": {
+        "classnames": "^2.5.1"
+    }
+}

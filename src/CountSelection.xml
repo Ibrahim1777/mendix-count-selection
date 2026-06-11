@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="siemens.countselection.CountSelection" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Count Selection</name>
+    <description>Searchable dropdown to select a numeric value generated from a min/max range with a step size. Supports integer and decimal attributes.</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <propertyGroup caption="Data source">
+                <property key="valueAttribute" type="attribute" required="true">
+                    <caption>Value attribute</caption>
+                    <description>Attribute where the selected value is stored</description>
+                    <attributeTypes>
+                        <attributeType name="Integer"/>
+                        <attributeType name="Long"/>
+                        <attributeType name="Decimal"/>
+                    </attributeTypes>
+                </property>
+                <systemProperty key="Editability"/>
+                <systemProperty key="Visibility"/>
+                <property key="minValue" type="expression" required="true" defaultValue="0">
+                    <caption>Minimum value</caption>
+                    <description>First option in the dropdown (integer or decimal)</description>
+                    <returnType type="Decimal"/>
+                </property>
+                <property key="maxValue" type="expression" required="true" defaultValue="10">
+                    <caption>Maximum value</caption>
+                    <description>Last option in the dropdown (inclusive when reachable by step)</description>
+                    <returnType type="Decimal"/>
+                </property>
+                <property key="stepSize" type="expression" required="true" defaultValue="1">
+                    <caption>Step size</caption>
+                    <description>Increment between options, e.g. 1 or 0.5 or 0.25. Must be greater than 0</description>
+                    <returnType type="Decimal"/>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Behavior">
+                <property key="searchable" type="boolean" defaultValue="true">
+                    <caption>Searchable</caption>
+                    <description>Allow typing in the input to filter options. When off, the input only opens the dropdown</description>
+                </property>
+                <property key="placeholder" type="textTemplate" required="false">
+                    <caption>Placeholder</caption>
+                    <description>Text shown when no value is selected</description>
+                </property>
+                <property key="noResultsText" type="textTemplate" required="false">
+                    <caption>No results text</caption>
+                    <description>Text shown when the search matches no options</description>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+        <propertyGroup caption="Events">
+            <property key="onChangeAction" type="action" required="false">
+                <caption>On change</caption>
+                <description>Action executed after a value is selected</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>

@@ -1,0 +1,108 @@
+.widget-count-selection {
+    position: relative;
+}
+
+.count-selection {
+    position: relative;
+    width: 100%;
+}
+
+.count-selection__control {
+    position: relative;
+    width: 100%;
+}
+
+.count-selection__input {
+    width: 100%;
+    padding-right: 28px;
+    cursor: text;
+}
+
+.count-selection__input[readonly] {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.count-selection--disabled .count-selection__input {
+    cursor: not-allowed;
+    background-color: #f8f8f8;
+}
+
+.count-selection__caret-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.count-selection--disabled .count-selection__caret-button {
+    cursor: not-allowed;
+}
+
+.count-selection__caret {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #6c717c;
+    transition: transform 0.15s ease;
+}
+
+.count-selection--open .count-selection__caret {
+    transform: rotate(180deg);
+}
+
+.count-selection__menu {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    right: 0;
+    z-index: 1050;
+    background: #fff;
+    border: 1px solid #ced0d3;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.count-selection__list {
+    max-height: 220px;
+    margin: 0;
+    padding: 4px 0;
+    overflow-y: auto;
+    list-style: none;
+}
+
+.count-selection__option {
+    padding: 6px 12px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.count-selection__option--highlighted {
+    background-color: #f1f4f8;
+}
+
+.count-selection__option--selected {
+    background-color: #264ae5;
+    color: #fff;
+}
+
+.count-selection__option--selected.count-selection__option--highlighted {
+    background-color: #1f3bb3;
+}
+
+.count-selection__no-results {
+    padding: 6px 12px;
+    color: #6c717c;
+    font-style: italic;
+}
+
+.count-selection.has-error .count-selection__input {
+    border-color: #e33f4e;
+}
