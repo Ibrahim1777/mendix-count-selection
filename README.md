@@ -29,7 +29,7 @@ A Mendix pluggable widget (Web) that renders a **searchable combobox** for selec
 
 ## Usage
 
-1. Download the latest `siemens.CountSelection.mpk` from [Releases](https://github.com/Ibrahim1777/mendix-count-selection/releases) (or build it yourself, see below) and place it in your Mendix project's `widgets/` folder, or import it via **App > Synchronize App Directory** after copying.
+1. Download the latest `CountSelection.mpk` from [Releases](https://github.com/Ibrahim1777/mendix-count-selection/releases) (or build it yourself, see below) and place it in your Mendix project's `widgets/` folder, or import it via **App > Synchronize App Directory** after copying.
 2. Drop **Count Selection** onto a page inside a data container.
 3. Set the value attribute, min/max/step expressions, and optionally the on-change action.
 
