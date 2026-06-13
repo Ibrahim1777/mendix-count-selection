@@ -43,7 +43,7 @@ npm install
 # Dev build with watch + reload against a local Mendix project
 npm start
 
-# Production build — outputs dist/<version>/siemens.CountSelection.mpk
+# Production build — outputs dist/<version>/CountSelection.mpk
 npm run release
 ```
 
